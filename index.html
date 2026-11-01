@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muna Thapa — CV</title>
+<meta name="description" content="Muna Thapa — teacher and shop cashier based in Helsinki, Finland. Curriculum vitae.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f4;
+    --card: #ffffff;
+    --text: #2b2a33;
+    --muted: #6b6878;
+    --accent: #b4476b;
+    --accent2: #e0875f;
+    --accent-soft: #f6e6ec;
+    --line: #e9e3e6;
+    --shadow: 0 6px 24px rgba(60, 30, 50, .07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15131a;
+      --card: #211e27;
+      --text: #f0edf3;
+      --muted: #a9a4b5;
+      --accent: #e58aa8;
+      --accent2: #f0a27c;
+      --accent-soft: #35232c;
+      --line: #342f3b;
+      --shadow: 0 6px 24px rgba(0, 0, 0, .35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 "Inter", system-ui, sans-serif;
+  }
+
+  /* hero */
+  .hero {
+    position: relative; overflow: hidden; color: #fff; text-align: center;
+    padding: 72px 16px 110px;
+    background: linear-gradient(135deg, #8e2f57 0%, #b4476b 45%, #e0875f 100%);
+  }
+  .hero::before, .hero::after {
+    content: ""; position: absolute; border-radius: 50%; filter: blur(2px);
+    background: rgba(255, 255, 255, .12);
+  }
+  .hero::before { width: 380px; height: 380px; top: -140px; left: -100px; }
+  .hero::after { width: 280px; height: 280px; bottom: -120px; right: -60px; background: rgba(255, 255, 255, .1); }
+  .hero > * { position: relative; z-index: 1; }
+  .avatar {
+    width: 132px; height: 132px; border-radius: 50%; margin: 0 auto 20px;
+    border: 4px solid rgba(255, 255, 255, .85); overflow: hidden;
+    background: rgba(255, 255, 255, .2); display: grid; place-items: center;
+    font: 700 46px "Fraunces", serif; box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .hero h1 { font: 700 clamp(2.4rem, 8vw, 3.8rem)/1.05 "Fraunces", serif; margin: 0; letter-spacing: -0.02em; }
+  .tagline { margin: 10px 0 24px; opacity: .92; font-size: 1.1rem; }
+  .contact { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .contact a {
+    color: #fff; text-decoration: none; font-size: .95rem; font-weight: 500;
+    background: rgba(255, 255, 255, .18); border: 1px solid rgba(255, 255, 255, .35);
+    padding: 9px 18px; border-radius: 999px; backdrop-filter: blur(6px);
+    transition: background .2s, transform .2s;
+  }
+  .contact a:hover { background: rgba(255, 255, 255, .32); transform: translateY(-2px); }
+
+  /* content */
+  .wrap { max-width: 780px; margin: -60px auto 0; padding: 0 16px 48px; position: relative; z-index: 2; }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    box-shadow: var(--shadow); padding: 24px 26px; margin-top: 18px;
+    animation: rise .6s ease both;
+  }
+  section:nth-of-type(2) { animation-delay: .08s; }
+  section:nth-of-type(3) { animation-delay: .16s; }
+  section:nth-of-type(4) { animation-delay: .24s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { section { animation: none; } html { scroll-behavior: auto; } }
+  h2 {
+    margin: 0 0 16px; font: 700 1.35rem "Fraunces", serif;
+    display: flex; align-items: center; gap: 12px;
+  }
+  h2::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); border-radius: 2px; }
+
+  .timeline { position: relative; padding-left: 26px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+  .item { position: relative; }
+  .item + .item { margin-top: 22px; }
+  .item::before {
+    content: ""; position: absolute; left: -26px; top: 7px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--card); border: 3px solid var(--accent);
+  }
+  .item h3 { margin: 0; font-size: 1.08rem; }
+  .org { color: var(--accent); font-weight: 600; font-size: .95rem; }
+  .meta { color: var(--muted); font-size: .88rem; }
+  .item ul { margin: 8px 0 0; padding-left: 20px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tags span {
+    background: var(--accent-soft); color: var(--accent); font-weight: 600;
+    padding: 6px 16px; border-radius: 999px; font-size: .92rem;
+  }
+  .langs { display: grid; gap: 14px; }
+  .lang { display: grid; grid-template-columns: 90px 1fr; gap: 12px; align-items: center; }
+  .lang b { font-weight: 600; }
+  .bar { height: 10px; background: var(--accent-soft); border-radius: 99px; overflow: hidden; }
+  .bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  .lvl-label { color: var(--muted); font-size: .8rem; margin-top: 2px; }
+  .note { color: var(--muted); font-size: .82rem; margin: 14px 0 0; }
+
+  footer { text-align: center; color: var(--muted); font-size: .85rem; margin-top: 28px; }
+  @media (max-width: 480px) { section { padding: 20px 18px; } .lang { grid-template-columns: 70px 1fr; } }
+  @media print {
+    .hero { color: #000; background: none; padding: 24px 0; }
+    .hero::before, .hero::after { display: none; }
+    .contact a { color: #000; background: none; border: 0; padding: 0 8px; }
+    .wrap { margin-top: 0; } section { box-shadow: none; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <!-- Drop a photo named photo.jpg next to this file to replace the initials -->
+    <div class="avatar"><img src="photo.jpg" alt="Muna Thapa" onerror="this.replaceWith('MT')"></div>
+    <h1>Muna Thapa</h1>
+    <p class="tagline">Teacher &amp; customer service · Helsinki, Finland</p>
+    <div class="contact">
+      <a href="mailto:munathapa375@gmail.com">✉ munathapa375@gmail.com</a>
+      <a href="tel:+358404670838">☎ +358 404670838</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Work experience</h2>
+      <div class="timeline">
+        <div class="item">
+          <h3>Shop cashier</h3>
+          <div class="org">Lulu Hypermarket</div>
+          <div class="meta">Dubai, United Arab Emirates · Jun 2022 – May 2023</div>
+        </div>
+        <div class="item">
+          <h3>Teacher</h3>
+          <div class="org">Eden Garden School</div>
+          <div class="meta">Kathmandu, Nepal · Apr 2019 – Mar 2022</div>
+          <ul><li>Taught students up to grade 5</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="item">
+          <h3>Higher Secondary School</h3>
+          <div class="org">Shree Laxmi Narayan Higher Secondary School</div>
+          <div class="meta">Kavrepalanchok, Nepal · Feb 2014 – Feb 2016</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <p style="margin:0 0 14px"><strong>Mother tongue:</strong> Nepali</p>
+      <div class="langs">
+        <div class="lang"><b>English</b><div><div class="bar"><i style="width:66%"></i></div><div class="lvl-label">B2 · Independent user</div></div></div>
+        <div class="lang"><b>Finnish</b><div><div class="bar"><i style="width:40%"></i></div><div class="lvl-label">A2.2 · Basic user</div></div></div>
+      </div>
+      <p class="note">Levels: A1–A2 basic · B1–B2 independent · C1–C2 proficient</p>
+    </section>
+
+    <section>
+      <h2>Digital skills</h2>
+      <div class="tags"><span>Microsoft Word</span><span>Excel</span><span>PowerPoint</span><span>Access</span></div>
+    </section>
+
+    <footer>Nationality: Nepalese</footer>
+  </main>
+</body>
+</html>
